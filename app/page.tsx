@@ -10,32 +10,33 @@ import confetti from "canvas-confetti"
 import Link from "next/link"
 
 const phrases = [
-  "Circle Back",
-  "Low-Hanging Fruit",
-  "Move the Needle",
-  "GAN",
-  "Bandwidth",
-  "Ping Me",
-  "Value-Add",
-  "Streamline Efforts",
-  "Deep Dive",
-  "Quick Win",
-  "Hit the Ground Running",
-  "Align Stakeholders",
-  "Bear With Me",
-  "Actionable Insights",
-  "Best Practices",
-  "Holistic View",
-  "Circle of Influence",
-  "Touch Base",
-  "Take Offline",
-  "Drill Down",
-  "Synergy",
-  "Push the Envelope",
-  "GNOSC",
-  "Think Outside the Box",
   "Game Changer",
-]
+  "Circle of Influence",
+  "Bandwidth",
+  "Best Practices",
+  "Touch Base",
+  "Drill Down",
+  "GNOSC",
+  "Deep Dive",
+  "Value-Add",
+  "Take Offline",
+  "Push the Envelope",
+  "Move the Needle",
+  "Quick Win",
+  "Align Stakeholders",
+  "Synergy",
+  "Holistic View",
+  "Circle Back",
+  "Ping Me",
+  "Streamline Efforts",
+  "Bear With Me",
+  "Low-Hanging Fruit",
+  "Actionable Insights",
+  "GAN",
+  "Think Outside the Box",
+  "Hit the Ground Running"
+];
+
 
 // Deterministic shuffle based on a seed (user ID + date)
 function seededShuffle(array: string[], seed: string): string[] {
@@ -80,7 +81,7 @@ export default function Home() {
   // Generate new board if saved one is missing or invalid
   const seed = `${user.uid}_${today}`
   const shuffledPhrases = seededShuffle(phrases, seed)
-const safePhrases = [...shuffledPhrases, ...Array(24)].slice(0, 24) // ensures length
+const safePhrases = phrases// ensures length
 const newBoard = [
   ...safePhrases.slice(0, 12),
   "LOGO_PLACEHOLDER",
