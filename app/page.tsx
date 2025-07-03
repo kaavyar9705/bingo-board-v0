@@ -11,7 +11,7 @@ import Link from "next/link"
 
 const phrases = [
   "Game Changer",
-  "Circle of Influence",
+  "Hit the ground running",
   "Bandwidth",
   "Best Practices",
   "Touch Base",
